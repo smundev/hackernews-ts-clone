@@ -1,0 +1,84 @@
+#root {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 10pt;
+}
+
+.container {
+  display: flex;
+  width: 85%;
+  flex-direction: column;
+  background-color: rgb(246, 246, 239);
+  gap: 10px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 24px;
+  background-color: #ff6600;
+}
+
+.header > img {
+  aspect-ratio: 1;
+  height: 18px;
+  border: 1px solid #fff;
+  margin: 2px;
+}
+
+.story-container {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.story-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.story-group {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  gap: 5px;
+}
+
+.story-group > span {
+  color: #828282;
+}
+
+.story-body > small {
+  color: #828282;
+  font-size: 7pt;
+}
+.story-body > label > a {
+  color: #828282;
+  font-size: 8pt;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.story-body > small > span {
+  cursor: pointer;
+}
+
+.story-body > small > span:hover {
+  text-decoration: underline;
+}
+
+.story-body > label > a > span:hover {
+  text-decoration: underline;
+}
+
+.story {
+  display: flex;
+  flex-direction: column;
+  padding: 0 5px;
+}
