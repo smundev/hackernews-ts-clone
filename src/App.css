@@ -12,6 +12,7 @@
   flex-direction: column;
   background-color: rgb(246, 246, 239);
   gap: 10px;
+  padding-bottom: 20px;
 }
 
 .header,
@@ -106,4 +107,23 @@
   align-content: center;
   justify-content: center;
   margin: 30px;
+}
+
+.load-more {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-color: #ff6600;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  width: 100px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #000;
+}
+
+.page-button-group {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
 }
