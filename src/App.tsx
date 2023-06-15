@@ -24,8 +24,13 @@ function App() {
     <>
       <main className="container">
         <header className="header">
-          <img src="public/y18.svg" alt="hacker news logo" />
-          <strong>Hacker News</strong>
+          <a href="/">
+            <img src="public/y18.svg" alt="hacker news logo" />
+          </a>
+
+          <a href="/">
+            <strong>Hacker News</strong>
+          </a>
         </header>
         <section className="story-container">
           {data?.GetTopStories.map((item: Story, i: number) => (

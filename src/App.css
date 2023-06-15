@@ -14,15 +14,18 @@
   gap: 10px;
 }
 
-.header {
+.header,
+.header > a {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   height: 24px;
   background-color: #ff6600;
+  text-decoration: none;
+  color: black;
 }
 
-.header > img {
+.header > a > img {
   aspect-ratio: 1;
   height: 18px;
   border: 1px solid #fff;
