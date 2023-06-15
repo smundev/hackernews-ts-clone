@@ -69,10 +69,7 @@
   cursor: pointer;
 }
 
-.story-body > small > span:hover {
-  text-decoration: underline;
-}
-
+.story-body > small > span:hover,
 .story-body > label > a > span:hover {
   text-decoration: underline;
 }
@@ -81,4 +78,22 @@
   display: flex;
   flex-direction: column;
   padding: 0 5px;
+}
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0;
+  margin-left: 10px;
+}
+
+.comment > summary {
+  color: #828282;
+  font-size: 8pt;
+}
+
+.comment > p {
+  padding: 0;
+  margin: 0;
+  font-size: 9pt;
 }

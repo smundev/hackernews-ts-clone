@@ -1,3 +1,7 @@
+import { useState } from "react";
+import { Comments } from "./Comment";
+import { timeAgo } from "./utils/time-age-calculator";
+
 export default function Story({
   story,
   index,
@@ -5,8 +9,10 @@ export default function Story({
   story: Story;
   index: number;
 }) {
-  const handleComments = (comments: number[]) => {
-    console.log("clicked", comments);
+  const [toggleComments, setToggleComments] = useState(false);
+
+  const handleComments = () => {
+    setToggleComments(!toggleComments);
   };
 
   return (
@@ -22,18 +28,22 @@ export default function Story({
           </label>
 
           <small>
-            {`${story.score} points by ${story.by} 3 hours ago`}
+            {`${story.score} points by ${story.by} ${timeAgo(story.time)}`}
             {story.kids && story.kids.length > 0 ? (
               <>
                 &nbsp;|&nbsp;
                 <span
-                  onClick={() => handleComments(story.kids)}
+                  onClick={() => handleComments()}
                 >{`${story.kids.length} comments`}</span>
               </>
             ) : (
               ""
             )}
           </small>
+
+          {toggleComments && story.kids && story.kids.length > 0 && (
+            <Comments kids={story.kids} />
+          )}
         </div>
       </div>
     </div>
