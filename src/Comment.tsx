@@ -20,7 +20,7 @@ export const Comments = ({ kids }: { kids: number[] }) => {
   });
 
   return (
-    <>
+    <div>
       {loading && <PulseLoader size={10} color="#ff6600" />}
       {data?.GetComments.map((item: Story) => (
         <details className="comment" key={item.id} open>
@@ -33,6 +33,6 @@ export const Comments = ({ kids }: { kids: number[] }) => {
           {item.kids && item.kids.length > 0 && <Comments kids={item.kids} />}
         </details>
       ))}
-    </>
+    </div>
   );
 };

@@ -21,7 +21,10 @@ export default function Story({
         <span>{`${index + 1}. `}</span>
         <div className="story-body">
           <label>
-            {story.title}&nbsp;
+            <a href={story.url} target="_blank">
+              {story.title}
+            </a>
+            &nbsp;
             <a href={story.url} target="_blank">
               <span>({story.url})</span>
             </a>

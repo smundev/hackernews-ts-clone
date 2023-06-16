@@ -3,7 +3,11 @@
   justify-content: center;
   width: 100%;
   font-family: Verdana, Geneva, sans-serif;
-  font-size: 10pt;
+  font-size: 0.8em;
+
+  @media screen and (max-width: 600px) {
+    font-size: 1em;
+  }
 }
 
 .container {
@@ -13,6 +17,9 @@
   background-color: rgb(246, 246, 239);
   gap: 10px;
   padding-bottom: 20px;
+  @media screen and (max-width: 600px) {
+    width: 100%;
+  }
 }
 
 .header,
@@ -40,16 +47,17 @@
   gap: 8px;
 }
 
-.story-body {
-  display: flex;
-  flex-direction: column;
-}
-
 .story-group {
   display: flex;
   flex-direction: row;
-  overflow: hidden;
+  width: 100%;
   gap: 5px;
+}
+
+.story-body {
+  display: flex;
+  flex-direction: column;
+  width: 93%;
 }
 
 .story-group > span {
@@ -60,15 +68,32 @@
   color: #828282;
   font-size: 7pt;
 }
-.story-body > label > a {
+
+.story-body > label {
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.story-body > label > a:nth-child(1) {
+  text-decoration: none;
+}
+
+.story-body > label > a:nth-child(1):visited {
+  color: #828282;
+}
+
+.story-body > label > a:nth-child(1):link {
+  color: #000;
+}
+
+.story-body > label > a:nth-child(2) {
   color: #828282;
   font-size: 8pt;
   text-decoration: none;
   text-overflow: ellipsis;
   white-space: nowrap;
-  cursor: pointer;
 }
-
 .story-body > small > span {
   cursor: pointer;
 }
